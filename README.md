@@ -2,79 +2,100 @@
 
 
 <div align="center">
+ 
 </div>
-Thesis: A flicker in the dark. Exploring MEV in the Ethereum Ecosystem
-This project provides a collection of tools to measure and analyze frontrunning attacks on private pools such as Flashbots. You can find the full Thesis [here](add github and set to private, just for Mr Ittner & Oettler) and all my collected data is available for [download](MY GOOGLE DRIVE Will Provide ALL DATA, upgraded to 100gb/year).
 
-Quick Start
-A Docker container with all the dependencies required can be found [here](My Google Drive Link image: readyfetch).
+<h1 align="center"> Thesis: A flicker in the dark. Exploring MEV in the Ethereum Ecosystem </h1>
 
-Follow the instructions below to set it up:
+A collection of tools to measure and analyze frontrunning attacks on private pools such as [Flashbots](https://docs.flashbots.net). 
+My Thesis can be found [here](add github and set to private, just for Mr Ittner & Oettler) and my data is available for download [here](MY GOOGLE DRIVE Will Provide ALL DATA, upgraded to 100gb/year).
 
-Note: Please check your system's capabilities and adjust accordingly.
+## Quick Start
 
-shell
-Copy code
+A container with all the dependencies can be found [here] (My Google Drive Link image: readyfetch)
+
+To run the container, please install docker and run:
+**pls check your systems capabilities and adjust accordingly**
+
+``` shell
 docker pull sebpet1337/0x:readyfetch
 docker run --name naughtykai -m 16g --memory-swap="24g" -p 8888:8888 -it readyfetch
-You can then start an instance of MongoDB inside the container:
 
-shell
-Copy code
+```
+
+Afterwards, start an instance of MongoDB inside the container:
+
+``` shell
 mkdir -p /data/db && mongod --fork --logpath /var/log/mongod.log
-To run the MEV measurement scripts, use the following commands inside the container:
+```
 
-Note: A Quicknode RPC connection to a fully synched Ethereum archive node is provided. You can change this to your own (but be aware of the limits!) in the PROVIDER variable in data-collection/mev/utils/settings.py.
 
-shell
-Copy code
+To run the MEV measurement scripts, simply run inside the container the following commands:
+
+**Quicknode RPC connection to a fully synched Ethereum archive node is provided - can change to own (watch limits!) in  ```PROVIDER``` in ```data-collection/mev/utils/settings.py``` !!**
+
+``` shell
 # Run the sandwich measurement script
 cd /root/data-collection/mev/sandwiches
-python3 sandwiches.py <BLOCK_RANGE_START>:<BLOCK_RANGE_END> # For example: python3 sandwiches.py 15900000:15901000
+python3 sandwiches.py <BLOCK_RANGE_START>:<BLOCK_RANGE_END> # For exmaple: python3 sandwiches.py 15900000:15901000
 
 # Run the arbitrage measurement script
 cd /root/data-collection/mev/arbitrage
-python3 arbitrage.py <BLOCK_RANGE_START>:<BLOCK_RANGE_END> # For example: python3 arbitrage.py 11706655:11706655
+python3 arbitrage.py <BLOCK_RANGE_START>:<BLOCK_RANGE_END> # For exmaple: python3 arbitrage.py 11706655:11706655
 
 # Run the liquidation measurement script
 cd /root/data-collection/mev/liquidation
-python3 liquidation.py <BLOCK_RANGE_START>:<BLOCK_RANGE_END> # For example: python3 liquidation.py 11181773:11181773
+python3 liquidation.py <BLOCK_RANGE_START>:<BLOCK_RANGE_END> # For exmaple: python3 liquidation.py 11181773:11181773
 
-# To download new price data from the Coingecko API and save to prices.json
-# This is already done and up to date till March 8th 2023 
-# If you want to update prices, change the settings. If you manually imported prices.json, this is not necessary.
+
+Download new price data from Coingecko Api and save to prices.json
+-> Already done and up to date till March 8th 2023 
+# change if you want to update prices, however if manually imprted prices.json no need
 cd /root/data-collection/mev/utils
-# Modify the settings.py
-# Set Update_Prices = True 
-You can download and import the Flashbots blocks into MongoDB by running the following commands inside the container. Note that this step is already completed in the 'readyfetch' image.
+change Settings.py 
+set Update_Prices = True 
 
-shell
-Copy code
+```
+
+**Download & Import the flashbots blocks into MongoDB by running inside the container the following commands:**
+-> This is already provided in image: readyfetch
+
+``` shell
 cd /root/data-collection/flashbots
 python3 import_flashbots_data.py
-To run the analysis, launch the Jupyter notebook server inside the container using the following commands and then open http://localhost:8888 on your browser:
+```
 
-shell
-Copy code
+
+**To run the analysis, please launch the Jupyter notebook server inside the container using the following commands and then open up http://localhost:8888 on your browser:**
+
+``` shell
 cd /root/analysis
 jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token='' --NotebookApp.password=''
-Useful Docker Commands
-Check if you're up and running
-docker ps Access MongoDB via terminal
-docker exec -it naughtykai mongo
+```
 
-Useful MongoDB Commands
-shell
-Copy code
+## Useful Docker Commands
+check if youre up and running
+```docker ps ```
+see MongoDB in Terminal
+```docker exec -it naughtykai mongo ```
+
+## Useful Commands MongoDB
+
+```
 show databases
 use flashbots
 show collections
-db.collectionName.find() 
-Attribution
-This project is a slightly modified version of the following paper:
+db.collectioName.find() 
+```
 
-bibtex
-Copy code
+
+
+
+
+## Attribution
+This is a slightly mofified version of this paper:
+
+``` bibtex
 @inproceedings{
   aflashbotinthepan, 
   address={Nice, France}, 
@@ -86,3 +107,4 @@ Copy code
   author={Weintraub, Ben and Ferreira Torres, Christof and Nita-Rotaru, Cristina and State, Radu}, 
   year={2022} 
 }
+```
