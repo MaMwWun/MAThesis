@@ -1,16 +1,38 @@
-# MAThesis
+# Thesis: A flicker in the dark. Exploring MEV in the Ethereum Ecosystem </h1>
 
-
-<div align="center">
- 
-</div>
-
-<h1 align="center"> Thesis: A flicker in the dark. Exploring MEV in the Ethereum Ecosystem </h1>
 
 A collection of tools to measure and analyze frontrunning attacks on private pools such as [Flashbots](https://docs.flashbots.net). 
-My Thesis can be found [here](add github and set to private, just for Mr Ittner & Oettler) and my data is available for download [here](MY GOOGLE DRIVE Will Provide ALL DATA, upgraded to 100gb/year).
+My Thesis can be found [here](add github and set to private, and my data is available for download [here](MY GOOGLE DRIVE Will Provide ALL DATA.
 
-## Quick Start
+SAME LAYOUT AS THESIS
+**Code**
+
+This repository contains:
+
+1. A script adapted from Torres, with adjustments to the sleep parameter at Coingecko prices and fixes for Python utility errors.
+2. Code for scraping the ZeroMev API and visualizing the data using Python and Pandas. This script generates monthly MEV type absolute values, USD values, and detects outlier blocks.
+3. A simple script for determining the start and end of a month, and the corresponding block range.
+
+**Datasets**
+
+The datasets included in this repository are:
+
+1. Data from Flashbots in Pan mev-inspect Script for Blocks 14,444,725 - 16,700,000
+   - `sandwich_results.json`
+   - `arbitrage_results.json`
+   - `liquidation_results.json`
+2. Data from ZeroMev scraped for Blocks 14,444,725 - 16,700,000
+   - `ZeroMevBlock14444725:16.700.000`
+3. A table detailing the months and dates corresponding to the ZeroMev data.
+
+**API Link:**
+[Insert API Link Here flashbotsblocksandzeromev]
+
+The comprehensive datasets and code made available in this appendix are intended to foster further research and understanding of MEV in the Ethereum ecosystem.
+
+
+
+## Quick Start to run Weintraub et al. Script 
 
 A container with all the dependencies can be found [here] (My Google Drive Link image: readyfetch)
 
