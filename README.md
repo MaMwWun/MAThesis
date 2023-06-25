@@ -1,10 +1,8 @@
 # Thesis: A flicker in the dark. Exploring MEV in the Ethereum Ecosystem </h1>
 
+my data is available for download [here](MY GOOGLE DRIVE Will Provide ALL DATA)
 
-A collection of tools to measure and analyze frontrunning attacks on private pools such as [Flashbots](https://docs.flashbots.net). 
-My Thesis can be found [here](add github and set to private, and my data is available for download [here](MY GOOGLE DRIVE Will Provide ALL DATA.
 
-SAME LAYOUT AS THESIS
 
 
 **Code**
@@ -36,14 +34,16 @@ The comprehensive datasets and code made available in this appendix are intended
 
 ## Quick Start to run Weintraub et al. Script 
 
-A container with all the dependencies can be found [here] (My Google Drive Link image: readyfetch)
+A container with all the dependencies can be found [here] (My Google Drive Link image: readyfetch)/ all data
+
+Depeding on your architecture zyou might need to rebuild!
 
 To run the container, please install docker and run:
 **pls check your systems capabilities and adjust accordingly**
 
 ``` shell
 docker pull sebpet1337/0x:readyfetch
-docker run --name naughtykai -m 16g --memory-swap="24g" -p 8888:8888 -it readyfetch
+docker run --name naughtynakamoto -m 16g --memory-swap="24g" -p 8888:8888 -it readyfetch
 
 ```
 
@@ -75,6 +75,7 @@ python3 liquidation.py <BLOCK_RANGE_START>:<BLOCK_RANGE_END> # For exmaple: pyth
 Download new price data from Coingecko Api and save to prices.json
 -> Already done and up to date till March 8th 2023 
 # change if you want to update prices, however if manually imprted prices.json no need
+
 cd /root/data-collection/mev/utils
 change Settings.py 
 set Update_Prices = True 
@@ -97,38 +98,10 @@ cd /root/analysis
 jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token='' --NotebookApp.password=''
 ```
 
-## Useful Docker Commands
-check if youre up and running
-```docker ps ```
-see MongoDB in Terminal
-```docker exec -it naughtykai mongo ```
-
-## Useful Commands MongoDB
-
-```
-show databases
-use flashbots
-show collections
-db.collectioName.find() 
-```
 
 
 
 
 
-## Attribution
-This is a slightly mofified version of this paper:
 
-``` bibtex
-@inproceedings{
-  aflashbotinthepan, 
-  address={Nice, France}, 
-  title={A Flash(bot) in the Pan: Measuring Maximal Extractable Value in Private Pools}, 
-  ISBN={978-1-4503-9259-4}, 
-  DOI={10.1145/3517745.3561448}, 
-  booktitle={Proceedings of the 22nd ACM Internet Measurement Conference (IMC ’22)}, 
-  publisher={Association for Computing Machinery}, 
-  author={Weintraub, Ben and Ferreira Torres, Christof and Nita-Rotaru, Cristina and State, Radu}, 
-  year={2022} 
-}
-```
+
