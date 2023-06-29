@@ -9,7 +9,7 @@ my data is available for download [here](MY GOOGLE DRIVE Will Provide ALL DATA)
 
 This repository contains:
 
-1. A script adapted from Torres, with adjustments to the sleep parameter at Coingecko prices and fixes for Python utility errors.
+1. A script adapted from Weintraub et al. to fetch MEV Data. With (minor) adjustments to the sleep parameter at Coingecko prices and fixes for Python utility errors.
 2. Code for scraping the ZeroMev API and visualizing the data using Python and Pandas. This script generates monthly MEV type absolute values, USD values, and detects outlier blocks.
 3. A simple script for determining the start and end of a month, and the corresponding block range.
 
