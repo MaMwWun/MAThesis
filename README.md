@@ -1,20 +1,19 @@
 # Thesis: A flicker in the dark. Exploring MEV in the Ethereum Ecosystem </h1>
 
-my data is available for download [here](https://drive.google.com/drive/folders/1cVgVEUX0S994oWsd2E1X789o-jLbQLPl?usp=sharing](https://drive.google.com/drive/folders/1_J6eKtyw1vxG_27ZU0DUhYFJgEEGbTKF?usp=sharing)
-
-
-
+My data is available for download [here](https://drive.google.com/drive/folders/1_J6eKtyw1vxG_27ZU0DUhYFJgEEGbTKF?usp=sharing)
 
 **Code**
 
 This repository contains:
 
-1. A script adapted from Weintraub et al. to fetch MEV Data. With (minor) adjustments in utils.py to the sleep parameter at Coingecko prices and fixes for Python utility errors.
-Also, FlashbotsAnalysis.ipynb environmental variable fix, updated range to 2023, get all mev not only mev via flashbots [MEV Script (Weintraub et al.)]
+1. A script adapted from Weintraub et al. to fetch MEV Data. With (minor) adjustments.[MEV Script (Weintraub et al.)]
+   - utils.py (sleep parameter >10 for Coingecko prices and fixes for Python utility error)
+   - FlashbotsAnalysis.ipynb (environmental variable fix, updated range to 2023, get all mev not only mev via flashbots) 
+   - add FlashbotsScraper
 
 2. Code for scraping the Zeromev API [ZeromevScraper]
 3. Visualizing the data using Python and Pandas. This script generates monthly MEV type absolute values, USD values, and detects outlier blocks.[CreatePlots]
-4. A simple script for determining end of month, corresponding blocknumber [BlocknumberStartMonth]
+4. A simple script for determining the end of month, corresponding blocknumber [BlocknumberStartMonth]
 
 **Datasets**
 
@@ -29,6 +28,7 @@ The datasets included in this repository are:
 3. A table detailing the months and dates corresponding to the ZeroMev data.[Data]
 
 **API Link:**
+
 https://blocks.flashbots.net/
 
 https://data.zeromev.org/docs/
