@@ -39,9 +39,9 @@ The comprehensive datasets and code made available in this appendix are intended
 
 ## Quick Start to run Weintraub et al. Script 
 
-A container with all the dependencies can be found [here] (My Google Drive Link image: readyfetch)/ all data
+A container with all the dependencies can be found [here] (dockerhub)
 
-Depeding on your architecture zyou might need to rebuild!
+Depeding on your architecture (amd/arm) you might need to rebuild!
 
 To run the container, please install docker and run:
 **pls check your systems capabilities and adjust accordingly**
@@ -61,7 +61,9 @@ mkdir -p /data/db && mongod --fork --logpath /var/log/mongod.log
 
 To run the MEV measurement scripts, simply run inside the container the following commands:
 
-**Quicknode RPC connection to a fully synched Ethereum archive node is provided - can change to own (watch limits!) in  ```PROVIDER``` in ```data-collection/mev/utils/settings.py``` !!**
+**Quicknode RPC connection to a fully synched Ethereum archive node is provided - can change to own (watch limits!) 
+BCCM desperately needs one, I recommend to setup Erigon ;)
+in  ```PROVIDER``` in ```data-collection/mev/utils/settings.py``` !!**
 
 ``` shell
 # Run the sandwich measurement script
