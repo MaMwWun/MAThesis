@@ -14,7 +14,7 @@ Also, FlashbotsAnalysis.ipynb environmental variable fix, updated range to 2023,
 
 2. Code for scraping the Zeromev API [ZeromevScraper]
 3. Visualizing the data using Python and Pandas. This script generates monthly MEV type absolute values, USD values, and detects outlier blocks.[CreatePlots]
-4. A simple script for determining end of month, corresponding blocknumber []
+4. A simple script for determining end of month, corresponding blocknumber [BlocknumberStartMonth]
 
 **Datasets**
 
@@ -29,7 +29,8 @@ The datasets included in this repository are:
 3. A table detailing the months and dates corresponding to the ZeroMev data.[Data]
 
 **API Link:**
-[Insert API Link Here flashbotsblocksandzeromev]
+https://blocks.flashbots.net/
+https://data.zeromev.org/docs/
 
 The comprehensive datasets and code made available in this appendix are intended to foster further research and understanding of MEV in the Ethereum ecosystem.
 
