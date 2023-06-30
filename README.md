@@ -81,7 +81,7 @@ python3 liquidation.py <BLOCK_RANGE_START>:<BLOCK_RANGE_END> # For exmaple: pyth
 
 Download new price data from Coingecko Api and save to prices.json
 -> Already done and up to date till March 8th 2023 
-# change if you want to update prices, however if manually imprted prices.json no need
+# change if you want to update prices, however, if manually imported prices.json no need
 
 cd /root/data-collection/mev/utils
 change Settings.py 
@@ -90,7 +90,7 @@ set Update_Prices = True
 ```
 
 **Download & Import the flashbots blocks into MongoDB by running inside the container the following commands:**
--> This is already provided in image: readyfetch
+-> need to update via Flashbots API. Watch out! 18GB
 
 ``` shell
 cd /root/data-collection/flashbots
@@ -99,6 +99,7 @@ python3 import_flashbots_data.py
 
 
 **To run the analysis, please launch the Jupyter notebook server inside the container using the following commands and then open up http://localhost:8888 on your browser:**
+Watch out! Extremly memory heavy, I had to use 32cpu /70 mem
 
 ``` shell
 cd /root/analysis
