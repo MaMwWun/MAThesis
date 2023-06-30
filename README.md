@@ -39,7 +39,7 @@ The comprehensive datasets and code made available in this appendix are intended
 
 ## Quick Start to run Weintraub et al. Script 
 
-A container with all the dependencies can be found [here] (dockerhub)
+A container with all the dependencies can be pulled from Docker hub (see below)
 
 Depeding on your architecture (amd/arm) you might need to rebuild!
 
