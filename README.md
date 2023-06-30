@@ -10,11 +10,11 @@ my data is available for download [here](MY GOOGLE DRIVE Will Provide ALL DATA)
 This repository contains:
 
 1. A script adapted from Weintraub et al. to fetch MEV Data. With (minor) adjustments in utils.py to the sleep parameter at Coingecko prices and fixes for Python utility errors.
-Also, FlashbotsAnalysis.ipynb environmental variable fix, updated range to 2023, get all mev not only mev via flashbots
+Also, FlashbotsAnalysis.ipynb environmental variable fix, updated range to 2023, get all mev not only mev via flashbots [MEV Script (Weintraub et al.)]
 
-3. Code for scraping the Zeromev API [ZeromevScraper]
-4. Visualizing the data using Python and Pandas. This script generates monthly MEV type absolute values, USD values, and detects outlier blocks.[]
-5. A simple script for determining end of month, corresponding blocknumber
+2. Code for scraping the Zeromev API [ZeromevScraper]
+3. Visualizing the data using Python and Pandas. This script generates monthly MEV type absolute values, USD values, and detects outlier blocks.[CreatePlots]
+4. A simple script for determining end of month, corresponding blocknumber []
 
 **Datasets**
 
@@ -26,7 +26,7 @@ The datasets included in this repository are:
    - `liquidation_results.json`
 2. Data from ZeroMev scraped for Blocks 14,444,725 - 16,700,000
    - `ZeroMevBlock14444725:16.700.000`
-3. A table detailing the months and dates corresponding to the ZeroMev data.
+3. A table detailing the months and dates corresponding to the ZeroMev data.[Data]
 
 **API Link:**
 [Insert API Link Here flashbotsblocksandzeromev]
