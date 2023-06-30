@@ -12,8 +12,9 @@ This repository contains:
 1. A script adapted from Weintraub et al. to fetch MEV Data. With (minor) adjustments in utils.py to the sleep parameter at Coingecko prices and fixes for Python utility errors.
 Also, FlashbotsAnalysis.ipynb environmental variable fix, updated range to 2023, get all mev not only mev via flashbots
 
-3. Code for scraping the ZeroMev API and visualizing the data using Python and Pandas. This script generates monthly MEV type absolute values, USD values, and detects outlier blocks.
-4. A simple script for determining the start and end of a month, and the corresponding block range.
+3. Code for scraping the Zeromev API []
+4. Visualizing the data using Python and Pandas. This script generates monthly MEV type absolute values, USD values, and detects outlier blocks.[]
+5. A simple script for determining end of month, corresponding blocknumber
 
 **Datasets**
 
