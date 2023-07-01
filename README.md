@@ -1,6 +1,6 @@
 # Thesis: A flicker in the dark. Exploring MEV in the Ethereum Ecosystem </h1>
 
-My data is available for download [here](https://drive.google.com/drive/folders/1_J6eKtyw1vxG_27ZU0DUhYFJgEEGbTKF?usp=sharing)
+My data is available for download [here](https://drive.google.com/drive/folders/1_J6eKtyw1vxG_27ZU0DUhYFJgEEGbTKF?usp=sharing). If you have any questions, code missing, no access pls do not hesitate to shoot me a quick email s.wunderlich[at]hotmail[dot]com.
 
 **Code**
 
