@@ -27,13 +27,13 @@ The datasets included in this repository are:
    - `ZeroMevBlock14444725:16.700.000`
 3. A table detailing the months and dates corresponding to the ZeroMev data.[Data]
 
-**API Link:**
+**API Links:**
 
 https://blocks.flashbots.net/
 
 https://data.zeromev.org/docs/
 
-The comprehensive datasets and code made available in this appendix are intended to foster further research and understanding of MEV in the Ethereum ecosystem.
+
 
 
 
